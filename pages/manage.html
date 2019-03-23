@@ -1,0 +1,45 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    
+<div class="content-wrapper bg-light">
+  <div class="col-12 grid-margin">
+    {% if message %}
+      <div class="alert alert-success">{{message}}</div>
+    {% endif %}
+
+    {% for error in _errors %}
+      <div class="alert alert-danger">{{error}}</div>
+    {% endfor %}
+    <!-- content here -->
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Disqus Settings</h4>
+        <div class="alert alert-info col-md-6 col-sm-12">Add {% verbatim %}{{hook('disqus')}}{% endverbatim %} anywhere to show widget</div>
+        <form class="form-sample" name="general-settings" method="post">
+          <div class="row">
+            <div class="col-md-5">
+              <h5 class="mt-5">Settings</h5>
+              <div class="form-group row">
+                <label class="col-sm-12 col-form-label">@Username</label>
+                <div class="col-sm-12">
+                  <input type="text" name="username" class="form-control" placeholder="@username" value="{{disqus.username}}" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="float-right">
+            <button type="submit" type="button" class="btn btn-gradient-primary btn-icon-text">
+              <i class="mdi mdi-file-check btn-icon-prepend"></i>
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- content-wrapper ends -->
+        
+        
+{% endblock %}

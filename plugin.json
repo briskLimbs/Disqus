@@ -1,0 +1,11 @@
+{
+  "name" : "disqus",
+  "display_name": "Disqus",
+  "file": "disqus.php",
+  "author": "Saqib Razzaq",
+  "autor_website": "https://github.com/saqirzzq",
+  "date": "2019, 03, 21",
+  "description": "Add Disqus comments system",
+  "version": "0.1",
+  "state": "Beta"
+}
